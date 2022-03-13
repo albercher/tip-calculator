@@ -27,25 +27,44 @@
   </head>
   <body>
     <div class="main-div">
-      <label for="bill">Bill</label>
-      <input type="text" name="bill" />
-
-      <label>Select Tip %</label>
-      <div>
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <button>Custom</button>
+      <div class="split-left">
+        <div class="stack-input">
+          <label class="stack-block" for="bill">Bill</label>
+          <input class="stack-block" type="text" name="bill" />
+        </div>
+        <div class="stack-input">
+          <label class="stack-block">Select Tip %</label>
+          <div class="stack-block">
+            <button class="tip-btn">5%</button>
+            <button class="tip-btn">10%</button>
+            <button class="tip-btn">15%</button>
+            <button class="tip-btn">25%</button>
+            <button class="tip-btn">50%</button>
+            <button class="tip-btn custom">Custom</button>
+          </div>
+        </div>
+        <div class="stack-input">
+          <label class="stack-block" for="people">Number of People</label>
+          <input class="stack-block" type="number" name="people" />
+        </div>
       </div>
 
-      <label for="people">Number of People</label>
-      <input type="number" name="people" />
-
-      <div>
-        Tip Amount / person Total / person
-        <button>Reset</button>
+      <div class="totals">
+        <div class="section">
+          <div>
+            <p class="stack-block label">Tip Amount</p>
+            <p class="stack-block sublabel">/ person</p>
+          </div>
+          <p class="total" id="amount">$0.00</p>
+        </div>
+        <div class="section">
+          <div>
+            <p class="stack-block label">Total</p>
+            <p class="stack-block sublabel">/ person</p>
+          </div>
+          <p class="total" id="total">$0.00</p>
+        </div>
+        <button class="reset">Reset</button>
       </div>
     </div>
 
